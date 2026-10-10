@@ -1,73 +1,91 @@
 # Vaishali Sunepwar — Portfolio
 
-Built with React + Vite + Tailwind CSS v4 + Framer Motion.
+Personal portfolio of **Vaishali Sunepwar**, an AI/ML student at PCCOE Pune who learns by building. The site shows my projects in computer vision, full-stack development and data analytics, along with my hackathons, open-source work and certificates.
 
-## Run locally
+🌐 **Live site:** https://vaishali-portfolio-gamma.vercel.app
+
+---
+
+## ✨ Features
+
+- Animated hero section with rotating roles
+- About, Skills, Projects, Experience, Certificates and Contact sections
+- Project cards with preview images that link to each GitHub repo
+- Particle background and glowing orbs with a "detection" visual theme
+- Fully responsive, from mobile to desktop
+- All content kept in a single file (`src/data.js`)
+
+## 🚀 Featured projects
+
+| Project | Description | Repo |
+|---|---|---|
+| **LocalMart** | Full-stack grocery e-commerce platform | [Prodigy_FS_3](https://github.com/111-Vaishali/Prodigy_FS_3) |
+| **ChatSphere** | Real-time chat app with Socket.IO | [Prodigy_FS_4](https://github.com/111-Vaishali/Prodigy_FS_4) |
+| **PPEVision** | YOLO11s-based worker safety / PPE compliance monitoring | [PPEVision](https://github.com/111-Vaishali/PPEVision) |
+| **Greenery Detection** | OpenCV + KNN/SVM vegetation detection | [Greenary_Detection](https://github.com/111-Vaishali/Greenary_Detection) |
+| **WhatsApp Chat Analyzer** | Flask app for chat analytics | [WhatsApp-Chat-Analyzer](https://github.com/111-Vaishali/WhatsApp-Chat-Analyzer) |
+| **CreditHealth** | Fintech simulation platform (DevHack, IIT Dharwad) | [HM058_HackMatrix](https://github.com/111-Vaishali/HM058_HackMatrix) |
+
+## 🛠️ Tech stack
+
+- **React 19** with **Vite**
+- **Tailwind CSS v4**
+- **Framer Motion** for animations
+- **Lucide React** for icons
+- Deployed on **Vercel**
+
+## 📁 Project structure
+
+```text
+vaishali-portfolio/
+├── public/
+│   ├── certificates/     # certificate images
+│   └── projects/         # project preview images
+├── src/
+│   ├── components/       # Hero, About, Skills, Projects, etc.
+│   ├── data.js           # all portfolio content lives here
+│   ├── App.jsx
+│   └── index.css
+├── index.html
+└── vite.config.js
+```
+
+## 💻 Run locally
 
 ```bash
+git clone https://github.com/111-Vaishali/vaishali-portfolio.git
+cd vaishali-portfolio
 npm install
 npm run dev
 ```
 
-Open http://localhost:5173
+The site opens at `http://localhost:5173`.
 
-## Build for production
+Build for production:
 
 ```bash
 npm run build
-```
-
-Output goes to `dist/`. Preview it with:
-
-```bash
 npm run preview
 ```
 
-## Deploy (Vercel — easiest)
+## ✏️ Editing content
 
-1. Push this folder to a new GitHub repo.
-2. Go to https://vercel.com → "Add New Project" → import the repo.
-3. Framework preset: **Vite**. Build command: `npm run build`. Output dir: `dist`.
-4. Click Deploy. Done — you'll get a live `.vercel.app` URL, and every push to `main` auto-redeploys.
+Everything personal — name, roles, skills, projects, experience, certificates and links — is in **`src/data.js`**. Edit that file and the whole site updates.
 
-(Netlify works the same way: build command `npm run build`, publish dir `dist`.)
+- **Add a project:** add an object to the `projects` array and put its image in `public/projects/`.
+- **Add a certificate:** add an entry to `certificates` and put its image in `public/certificates/`.
 
-## Where to edit your content
+## 🚢 Deployment
 
-Everything personal (name, bio, skills, projects, experience, education, contact links)
-lives in **one file**: `src/data.js`. Edit that file and every section updates automatically —
-you don't need to touch the component files unless you want to change layout or design.
+Deployed on Vercel, which auto-detects Vite. Every push to `main` triggers a new deploy.
+Settings: framework **Vite**, build command `npm run build`, output directory `dist`.
 
-### Adding certificates
-`src/components/Certificates.jsx` currently shows 3 empty placeholder slots.
-Once you have certificate images/PDFs, drop them in `public/certificates/`, then replace
-the placeholder loop with real cards (happy to wire this up for you whenever you're ready —
-just share the certificate files or names).
+## 📬 Contact
 
-### Adding real GitHub/live links
-In `src/data.js`, several `projects` entries point `github` to your profile
-(`https://github.com/111-Vaishali`) as a placeholder because I couldn't confirm each project's
-exact repo URL. Swap in the specific repo links once you have them, and add a `live` URL
-(e.g. a Vercel/Render link) for any project that's deployed.
+- GitHub: [@111-Vaishali](https://github.com/111-Vaishali)
+- LinkedIn: [vaishali-sunepwar](https://www.linkedin.com/in/vaishali-sunepwar)
+- Email: sunepwar.vaishali@gmail.com
 
-## Tech stack
+---
 
-- React 19 + Vite
-- Tailwind CSS v4 (via `@tailwindcss/vite`)
-- Framer Motion (scroll reveals, hero animation)
-- lucide-react (icons)
-- Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (tags/labels)
-
-## Design concept
-
-The whole visual language is built around a computer-vision "detection" motif — bracket
-corners like a camera viewfinder framing sections and cards, monospace confidence-style
-tags (e.g. `computer-vision · 0.97`) next to headings, a hero where the role cycles like a
-live model prediction, and an animated particle network drifting behind the whole page
-(nodes connecting like a data graph). It's a deliberate nod to your CV/ML background
-rather than a generic dark-theme template.
-
-The background animation is a lightweight `<canvas>` component
-(`src/components/ParticleBackground.jsx`) — no extra libraries, GPU-cheap, and it
-automatically freezes into a static frame for visitors with "reduce motion" enabled in
-their OS settings.
+Built with React, caffeine and a few 2am commits. 🌙
