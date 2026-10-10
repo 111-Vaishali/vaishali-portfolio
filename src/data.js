@@ -1,3 +1,4 @@
+const asset = (path) => import.meta.env.BASE_URL + path.replace(/^\//, "");
 export const profile = {
   name: "Vaishali Sunepwar",
   roles: [
@@ -75,7 +76,7 @@ export const projects = [
     subtitle: "Grocery E-Commerce Platform",
     tag: "web-app · full-stack",
     confidence: "0.94",
-    image: "/projects/localmart.jpg",
+    image: asset("/projects/localmart.jpg"),
     imageAlt: "LocalMart grocery storefront with cart",
     description:
       "Full-stack e-commerce platform with product browsing, cart, wishlist, and order management. Backend built with Node.js, Express, and MongoDB, secured with JWT auth and role-based access control.",
@@ -89,7 +90,7 @@ export const projects = [
     subtitle: "Real-Time Chat App",
     tag: "web-app · realtime",
     confidence: "0.92",
-    image: "/projects/chatsphere.jpg",
+    image: asset("/projects/chatsphere.jpg"),
     imageAlt: "ChatSphere chat app on desktop and mobile",
     description:
       "A WhatsApp-inspired messaging app with live chat, typing indicators, and read receipts over Socket.IO. JWT auth with refresh tokens, group chat management, and media sharing via Multer & Cloudinary.",
@@ -103,7 +104,7 @@ export const projects = [
     subtitle: "AI Worker Safety & PPE Compliance Monitoring",
     tag: "computer-vision · yolo",
     confidence: "0.96",
-    image: "/projects/ppevision.jpg",
+    image: asset("/projects/ppevision.jpg"),
     imageAlt: "PPEVision dashboard flagging missing PPE on a worksite",
     description:
       "Detects helmets, vests, gloves, boots and goggles on workers and flags PPE violations as SAFE or VIOLATION. A YOLO11s model trained on the Construction-PPE dataset (11 classes) serves bounding boxes and confidence scores through a FastAPI backend to a React dashboard with image upload.",
@@ -117,7 +118,7 @@ export const projects = [
     subtitle: "Computer Vision & ML Pipeline",
     tag: "computer-vision",
     confidence: "0.97",
-    image: "/projects/greenery-detection.jpg",
+    image: asset("/projects/greenery-detection.jpg"),
     imageAlt: "Vegetation detection and ML pipeline dashboard",
     description:
       "A CV pipeline using OpenCV HSV color-space thresholding to detect and quantify vegetation coverage from location images. KNN and SVM classifiers compared and validated with Stratified K-Fold Cross Validation.",
@@ -131,7 +132,7 @@ export const projects = [
     subtitle: "Data Analytics Web App",
     tag: "data-viz · flask",
     confidence: "0.90",
-    image: "/projects/whatsapp-analyzer.jpg",
+    image: asset("/projects/whatsapp-analyzer.jpg"),
     imageAlt: "WhatsApp chat analytics dashboard",
     description:
       "A Flask app that parses exported WhatsApp chats into data-driven insights — user-wise activity, timelines, emoji stats, and word clouds. Deployed on Render.",
@@ -145,7 +146,7 @@ export const projects = [
     subtitle: "Fintech Simulation Platform",
     tag: "hackathon · fintech",
     confidence: "0.89",
-    image: "/projects/credithealth.jpg",
+    image: asset("/projects/credithealth.jpg"),
     imageAlt: "CreditHealth credit simulation dashboard",
     description:
       "Built and deployed with a 4-member team at DevHack, IIT Dharwad — simulating credit score, loan eligibility, and EMI planning to make personal finance concepts tangible.",
